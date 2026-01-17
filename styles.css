@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --pri-color:  rgb(3, 180, 234);
+    --sec-color:rgb(243, 121, 164);
+    --bg-color: rgb(223, 232, 233);
+    --font-light-color: rgb(120, 120, 120) 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: min-content 1fr;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.menu {
+    grid-row: 1 / -1;
+    background-color: var(--pri-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu h2{
+    font-size: 1.2rem;
+}
+
+.menu>div:first-child img {
+    height: 2rem;
+}
+
+.menu>div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu img {
+    height: 1rem;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding-left: 20px;
+    padding-right: 40px;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 5fr minmax(150px, 1fr);
+    grid-template-rows: min-content 1fr;
+    background-color: var(--bg-color);
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+    gap: 20px;
+    box-shadow: -2px 4px 7px -7px inset;
+}
+
+.dashboard h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.projects {
+    grid-row: 1 / -1;
+}
+
+.projects .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project{
+    height: 180px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 20px;
+    border-left: 7px solid var(--sec-color);
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px -4px;
+}
+
+.project div:last-child {
+    height: 1rem;
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+}
+
+.project p {
+    color: var(--font-light-color);
+    margin-top: 5px;
+}
+
+.project img {
+    height: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-bar button {
+    width: 20px;
+    background-color: white;
+    border: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    height: 1.5rem;
+    flex-grow: 1;
+    background-color: var(--bg-color);
+    border: 0;
+    border-radius: 0.75rem;
+    max-width: 300px;
+}
+
+.login-info, .actions {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.actions button {
+    background-color: var(--pri-color);
+    border: 0;
+    color: white;
+    padding: 10px 25px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: calc(1rem + 10px);
+}
+
+.login-info .notification {
+    height: 1.2rem;
+}
+
+.login-info .profile {
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.login-info div{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.welcome-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcome-note img{
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.welcome-note p{
+    font-size: 0.7rem;
+}
+
+.welcome-note span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.announcements .content, .team .content{
+    list-style: none;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px -4px;
+}
+
+.team .content{
+    padding: 10px 15px;
+}
+
+.announcements p {
+    font-size: 0.5rem;
+    color: var(--font-light-color);
+}
+
+.announcements h3 {
+    font-size: 0.6rem;
+    margin-bottom:2px;
+}
+
+.announcements li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.announcements li:not(:last-of-type) {
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.team img {
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.team li {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 10px;
+    font-size: 0.7rem;
+}
+
+.team span {
+    color: black;
+    font-weight: 400px;
+    display: block;
+}
+
+.team p {
+    color: var(--font-light-color);
+}
